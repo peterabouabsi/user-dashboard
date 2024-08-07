@@ -1,13 +1,13 @@
 <div class="list-container p-30 w-full">
     <div>
-        <table class="w-full min-h-42 max-h-300 p-relative">
-            <thead class="bg-secondary-20 pb-50">
+        <table class="w-full min-h-42 max-h-300 p-relative border-radius-10">
+            <thead class="pb-50 bg-primary-10">
                 <tr>
-                    <th class="w-2% p-10 text-start font-400 color-dark">Image</th>
-                    <th class="w-2% p-10 text-start font-400 color-dark">Id</th>
-                    <th class="w-20% p-10 text-start font-400 color-dark">Firstname</th>
-                    <th class="w-20% p-10 text-start font-400 color-dark">Lastname</th>
-                    <th class="w-20% p-10 text-start font-400 color-dark">Email</th>
+                    <th class="w-2% p-10 text-start font-600 color-dark border-top-left-radius-10">Image</th>
+                    <th class="w-2% p-10 text-start font-600 color-dark">Id</th>
+                    <th class="w-20% p-10 text-start font-600 color-dark">Firstname</th>
+                    <th class="w-20% p-10 text-start font-600 color-dark">Lastname</th>
+                    <th class="w-20% p-10 text-start font-600 color-dark border-top-right-radius-10">Email</th>
                 </tr>
             </thead>
 
@@ -43,7 +43,7 @@
             </div>
         </table>
 
-        <div class="pagination-container w-fit-content mt-20" *ngIf="!(user$ | async)">
+        <div class="pagination-container w-fit-content mt-20 f-right" *ngIf="!(user$ | async)">
             <app-pagination 
                 *ngIf="(users$ | async) as users"
                 [page]="users.page" 

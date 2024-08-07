@@ -6,32 +6,39 @@
 }
 table {
     border-collapse: collapse;
-    thead {
-        th {
-            border-bottom: 1px solid var(--dark-30);
-        }
+    box-shadow: 0 32px 12px -33px var(--dark-20);
+    th, td {
+        padding: 13px 25px;
     }
 
     tbody {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    
         tr {
             cursor: pointer;
             transition: 0.3s ease-in-out;
             animation: fade-in 0.3s ease-in-out;
-
+            
             &:hover {
                 background-color: var(--secondary-10);
             }
             &:active {
                 background-color: var(--secondary-20);
             }
-            
-            &:last-child {
-                border-bottom: 1px solid var(--dark-30);
-            }
 
             &.opacity {
                 opacity: 0.1;
                 transition: 0.3s ease-in-out;
+            }
+
+            td {
+                &:first-child {
+                    border-bottom-left-radius: 10px;
+                }
+                &:last-child {
+                    border-bottom-right-radius: 10px;
+                }
             }
         }
     }

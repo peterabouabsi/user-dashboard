@@ -1,15 +1,15 @@
 :root {
     /* Primary Color */
     --primary: rgb(0, 87, 255);
-    --primary-10: rgba(0, 87, 255, 0.1);
-    --primary-20: rgba(0, 87, 255, 0.2);
-    --primary-30: rgba(0, 87, 255, 0.3);
-    --primary-40: rgba(0, 87, 255, 0.4);
-    --primary-50: rgba(0, 87, 255, 0.5);
-    --primary-60: rgba(0, 87, 255, 0.6);
-    --primary-70: rgba(0, 87, 255, 0.7);
-    --primary-80: rgba(0, 87, 255, 0.8);
-    --primary-90: rgba(0, 87, 255, 0.9);
+    --primary-10: rgba(0, 87, 255, 0.02);
+    --primary-20: rgba(0, 87, 255, 0.1);
+    --primary-30: rgba(0, 87, 255, 0.2);
+    --primary-40: rgba(0, 87, 255, 0.3);
+    --primary-50: rgba(0, 87, 255, 0.4);
+    --primary-60: rgba(0, 87, 255, 0.5);
+    --primary-70: rgba(0, 87, 255, 0.6);
+    --primary-80: rgba(0, 87, 255, 0.7);
+    --primary-90: rgba(0, 87, 255, 0.8);
 
     /* Secondary Color */
     --secondary: rgb(255, 255, 255);
@@ -174,3 +174,5 @@
 .bg-dark-70 { background-color: var(--dark-70); }
 .bg-dark-80 { background-color: var(--dark-80); }
 .bg-dark-90 { background-color: var(--dark-90); }
+
+.bg-transparent { background-color: transparent; }
