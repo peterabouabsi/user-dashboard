@@ -1,0 +1,5 @@
+.spinner {
+  border: 6px solid var(--secondary-20);
+  border-top: 6px solid var(--secondary-90);
+  animation: spin 1s linear infinite;
+}

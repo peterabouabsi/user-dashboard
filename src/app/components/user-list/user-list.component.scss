@@ -1,0 +1,42 @@
+.list-container {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        background-color: transparent;
+    }
+}
+table {
+    border-collapse: collapse;
+    thead {
+        th {
+            border-bottom: 1px solid var(--dark-30);
+        }
+    }
+
+    tbody {
+        tr {
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            animation: fade-in 0.3s ease-in-out;
+
+            &:hover {
+                background-color: var(--secondary-10);
+            }
+            &:active {
+                background-color: var(--secondary-20);
+            }
+            
+            &:last-child {
+                border-bottom: 1px solid var(--dark-30);
+            }
+
+            &.opacity {
+                opacity: 0.1;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.spinner-container {
+    opacity: 0.9;
+}

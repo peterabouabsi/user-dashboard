@@ -1,0 +1,30 @@
+
+.user-details-container {
+    animation: fade-in 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 568px) {
+    .grid-container {
+        flex-direction: column;
+        gap: 10px;
+        .image-container {
+            order: 1;
+            justify-content: flex-start;
+            img {
+                max-width: 100px;
+                max-height: 100px;
+                width: 100%;
+            }
+        }
+        .info-container { 
+            justify-content: flex-start;
+            order: 2;
+            .name {
+                font-size: 24px;
+            }
+            .email {
+                font-size: 14px;
+            }
+        }
+    }
+}

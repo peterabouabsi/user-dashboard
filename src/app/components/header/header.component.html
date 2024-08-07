@@ -1,0 +1,10 @@
+<div class="nav-container w-full h-full pl-60 pr-60 d-flex jc-space-between ai-center bg-secondary-10">
+    <div class="icon-container font-700 color-dark cursor-pointer" routerLink="/users" *ngIf="nav_styles_config.showIcon">
+        User Dashboard
+    </div>
+    <div class="search-container w-270" *ngIf="nav_styles_config.showSearchBar">
+        <mat-form-field class="mat-small-input bg-secondary" appearance="outline">
+            <input matInput type="text" placeholder="Search users by id" [formControl]="search">
+        </mat-form-field>
+    </div>
+</div>

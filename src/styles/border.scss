@@ -1,0 +1,6 @@
+.border-circle { border-radius: 50% }
+
+@for $i from 1 through 100 {
+    .border-radius-#{$i} { border-radius: #{$i}px; }
+    .border-width-#{$i} { border-width: #{$i}px; }
+}

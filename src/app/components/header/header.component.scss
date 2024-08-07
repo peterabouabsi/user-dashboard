@@ -1,0 +1,13 @@
+@media screen and (max-width: 540px) {
+    .nav-container {
+        padding: 0 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+}

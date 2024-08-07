@@ -1,0 +1,58 @@
+<div class="list-container p-30 w-full">
+    <div>
+        <table class="w-full min-h-42 max-h-300 p-relative">
+            <thead class="bg-secondary-20 pb-50">
+                <tr>
+                    <th class="w-2% p-10 text-start font-400 color-dark">Image</th>
+                    <th class="w-2% p-10 text-start font-400 color-dark">Id</th>
+                    <th class="w-20% p-10 text-start font-400 color-dark">Firstname</th>
+                    <th class="w-20% p-10 text-start font-400 color-dark">Lastname</th>
+                    <th class="w-20% p-10 text-start font-400 color-dark">Email</th>
+                </tr>
+            </thead>
+
+            <!-- Search result --> 
+            <tbody *ngIf="(user$ | async) as user; else users_list">
+                <tr class="h-42 bg-secondary" [ngClass]="{opacity: is_loading}" [routerLink]="'/users/'+user.id">
+                    <td class="w-2% p-10"><img class="w-50 h-50 img-cover border-circle" [src]="user.avatar" alt=""></td>
+                    <td class="w-2% p-10">{{ user.id }}</td>
+                    <td class="w-20% p-10">{{ user.first_name }}</td>
+                    <td class="w-20% p-10">{{ user.last_name }}</td>
+                    <td class="w-20% p-10">{{ user.email }}</td>
+                </tr>
+            </tbody>
+
+            <!-- Users List -->
+            <ng-template #users_list>
+                <tbody *ngIf="(users$ | async) as users">
+                    <tr class="h-42 bg-secondary" *ngFor="let user of users.data" [ngClass]="{opacity: is_loading}"
+                        [routerLink]="'/users/'+user.id">
+                        <td class="w-2% p-10"><img class="w-40 h-40 img-cover border-circle" [src]="user.avatar" alt="">
+                        </td>
+                        <td class="w-2% p-10">{{ user.id }}</td>
+                        <td class="w-20% p-10">{{ user.first_name }}</td>
+                        <td class="w-20% p-10">{{ user.last_name }}</td>
+                        <td class="w-20% p-10">{{ user.email }}</td>
+                    </tr>
+                </tbody>
+            </ng-template>
+
+            <div class="spinner-container top-43 p-absolute w-full h-73% bg-secondary d-flex jc-center ai-center"
+                *ngIf="is_loading">
+                <app-spinner></app-spinner>
+            </div>
+        </table>
+
+        <div class="pagination-container w-fit-content mt-20" *ngIf="!(user$ | async)">
+            <app-pagination 
+                *ngIf="(users$ | async) as users"
+                [page]="users.page" 
+                [per_page]="users.per_page" 
+                [total]="users.total"
+                [total_pages]="users.total_pages" 
+                (pageChange)="onPageChange($event)">
+            </app-pagination>
+        </div>
+
+    </div>
+</div>

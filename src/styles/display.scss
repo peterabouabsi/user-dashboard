@@ -1,0 +1,42 @@
+.d-flex { display: flex; }
+.d-block { display: block; }
+.d-grid { display: grid; }
+.d-inline { display: inline; }
+.d-table { display: table; }
+
+.jc-start { justify-content: flex-start; }
+.jc-center { justify-content: center; }
+.jc-end { justify-content: flex-end; }
+.jc-space-between { justify-content: space-between; }
+.jc-space-around { justify-content: space-around; }
+.jc-space-evenly { justify-content: space-evenly; }
+
+.ai-start { align-items: flex-start; }
+.ai-center { align-items: center; }
+.ai-end { align-items: flex-end; }
+
+.fd-row { flex-direction: row; }
+.fd-col { flex-direction: column; }
+
+.wrap { flex-wrap: wrap; }
+.nowrap { flex-wrap: nowrap; }
+@for $i from 1 through 1000 { .flex-basis-#{$i} { flex-basis: #{$i}px; } }
+@for $i from 1 through 100 { .flex-basis-#{$i}\% { flex-basis: #{$i}+"%"; } }
+@for $i from 1 through 100 { .gap-#{$i} { gap: #{$i}px; } }
+
+.f-right { float: right; }
+.f-left { float: left; }
+
+
+.cursor-pointer { cursor: pointer; }
+.cursor-copy { cursor: copy; }
+.cursor-pointer { cursor: pointer; }
+.cursor-progress { cursor: progress; }
+.cursor-default { cursor: default; }
+.cursor-auto { cursor: auto; }
+.cursor-col-resize { cursor: col-resize; }
+.cursor-row-resize { cursor: row-resize; }
+.cursor-grab { cursor: grab; }
+.cursor-grabing { cursor: grabbing; }
+.cursor-move { cursor: move; }
+.cursor-not-allowed { cursor: not-allowed; }

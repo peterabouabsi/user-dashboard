@@ -1,0 +1,15 @@
+
+.header-container {
+    z-index: 9999999999;    
+}
+
+@media screen and (max-width: 540px) {
+    .header-container {
+        height: 90px;
+    }
+    
+    .body-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

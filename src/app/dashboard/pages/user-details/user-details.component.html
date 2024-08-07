@@ -1,0 +1,14 @@
+<div class="user-details-container" *ngIf="(user$ | async) as user">
+    <div class="breadcrumb-container">
+        <span class="back-link cursor-pointer color-primary" routerLink="/users">Users</span> / <span class="font-600">{{ user.first_name }} {{ user.last_name }}</span>
+    </div>
+    <div class="grid-container mt-50 d-flex jc-center gap-60">
+        <div class="image-container d-flex jc-end flex-basis-40% border-circle">
+            <img class="w-200 h-200 img-cover border-circle" [src]="user.avatar" alt="">
+        </div>
+        <div class="info-container d-flex ai-start fd-col flex-basis-40%">
+            <p class="name font-800 text-size-10 mb-3 color-dark"> {{ user.first_name }} {{ user.last_name }} </p>
+            <p class="email font-500 text-size-4 color-dark-50"> Mail to: {{ user.email }} </p>
+        </div>
+    </div>
+</div>

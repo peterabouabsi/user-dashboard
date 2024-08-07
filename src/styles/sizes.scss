@@ -1,0 +1,30 @@
+.w-full { width: 100%; }
+.w-auto { width: auto; }
+.w-fit-content { width: fit-content; }
+
+.h-full { height: 100%; }
+.h-auto { height: auto; }
+.h-fit-content { height: fit-content; }
+
+.w-screen { width: 100vh; }
+.min-w-screen { min-width: 100vh; }
+
+.h-screen { height: 100vh; }
+.min-h-screen { min-height: 100vh; }
+
+@for $i from 1 through 1000 {
+    .w-#{$i} { width: #{$i}px; }
+    .h-#{$i} { height: #{$i}px; }
+    .min-w-#{$i} { min-width: #{$i}px; }
+    .min-h-#{$i} { min-height: #{$i}px; }
+    .max-w-#{$i} { max-width: #{$i}px; }
+    .max-h-#{$i} { max-height: #{$i}px; }
+}
+@for $i from 1 through 100 { 
+    .w-#{$i}\% { width: #{$i}+"%"; }
+    .h-#{$i}\% { height: #{$i}+"%"; }
+    .min-w-#{$i}\% { min-width: #{$i}+"%"; }
+    .min-h-#{$i}\% { min-height: #{$i}+"%"; }
+    .max-w-#{$i}\% { max-width: #{$i}+"%"; }
+    .max-h-#{$i}\% { max-height: #{$i}+"%"; }
+}

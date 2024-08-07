@@ -1,0 +1,21 @@
+<div class="pagination-container d-flex jc-center ai-center gap-10">
+    <button class="pl-20 pr-20 text-size-3"
+            (click)="changePage(page - 1)"
+            [disabled]="page === 1"
+            [ngClass]="{'bg-secondary cursor-not-allowed color-dark-50': page === 1, 'bg-secondary-20 color-dark': page > 1}">
+        Previous
+    </button>
+    <button class="pl-10 pr-10 text-size-3 color-dark bg-secondary"
+            *ngFor="let p of pages"
+            (click)="changePage(p)"
+            [ngClass]="{'color-primary font-600' : p === page}">
+        {{ p }}
+    </button>
+    <button class="pl-20 pr-20 text-size-3"
+            (click)="changePage(page + 1)" 
+            [disabled]="page === total_pages"
+            [ngClass]="{'bg-secondary cursor-not-allowed color-dark-50': page === total_pages, 'bg-secondary-20 color-dark': page < total_pages}">
+        Next
+    </button>
+  </div>
+  
